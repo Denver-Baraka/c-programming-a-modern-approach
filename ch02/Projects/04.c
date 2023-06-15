@@ -1,12 +1,17 @@
 #include <stdio.h>
 
-float amount;
+#define TAX 5
 
 int main(void)
 {
+    float amount;
+    float with_tax;
+    
     printf("Enter an amount: ");
     scanf("%f", &amount);
-    printf("with tax added: $%.2f", amount * 1.05f);
+
+    with_tax = ((100.00f + TAX) / 100.00f) * amount;
+    printf("with tax added: $%.2f", with_tax);
 
     return 0;
 }
